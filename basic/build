@@ -1,0 +1,1 @@
+pandoc main.md -t html --self-contained --css=basic.css --number-sections --toc -o test.html -V title:"Example Specification" -V pagetitle:"Example Specification"
