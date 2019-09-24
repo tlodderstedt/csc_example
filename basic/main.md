@@ -1,4 +1,4 @@
-.# Abstract 
+# Abstract 
 
 This document defines the pushed authorization request endpoint, which allows
 clients to push the payload of an OAuth 2.0 authorization request to the
@@ -7,7 +7,7 @@ with a request URI that is used as reference to the data in a subsequent authori
 
 # Introduction {#Introduction}
 
-In OAuth [@!RFC6749] authorization request parameters are typically sent as URI query 
+[RFC6749] authorization request parameters are typically sent as URI query 
 parameters via redirection in the user-agent. This is simple but also yields challenges:
 
 * There is no cryptographical integrity and authenticity protection, i.e. the request can be modified on its way through the user-agent and attackers can impersonate legitimate clients.
@@ -78,6 +78,11 @@ JSON example
    }
 }
 ```
+
+Here is an image
+
+![alt text](architecture.png "Logo Title Text 1")
+
 And here is a table
 
 | Identifier | Definition|
@@ -106,6 +111,10 @@ This specification uses the terms "access token", "refresh token",
 
 ## Heading AA
 
+# References
+
+[RFC6749](https://tools.ietf.org/html/rfc6749)
+
 # Document History
 
    [[ To be removed from the final specification ]]
@@ -113,4 +122,8 @@ This specification uses the terms "access token", "refresh token",
    -00 
 
    *  first draft
+
+   
+   
+
    
