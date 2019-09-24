@@ -17,7 +17,7 @@ OAuth ([RFC 6749](https://tools.ietf.org/html/rfc6749)) authorization request pa
 
 For example, the following authorization request,
 
-```
+```HTTP
   GET /authorize?response_type=code
    &client_id=s6BhdRkqt3&state=af0ifjsldkj
    &redirect_uri=https%3A%2F%2Fclient.example.org%2Fcb HTTP/1.1
