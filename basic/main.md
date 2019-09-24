@@ -7,21 +7,13 @@ with a request URI that is used as reference to the data in a subsequent authori
 
 # Introduction {#Introduction}
 
-[RFC6749] authorization request parameters are typically sent as URI query 
-parameters via redirection in the user-agent. This is simple but also yields challenges:
+OAuth ([RFC 6749](https://tools.ietf.org/html/rfc6749)) authorization request parameters are typically sent as URI query parameters via redirection in the user-agent. This is simple but also yields challenges:
 
 * There is no cryptographical integrity and authenticity protection, i.e. the request can be modified on its way through the user-agent and attackers can impersonate legitimate clients.
 * There is no mechanism to ensure confidentiality of the request parameters.
 * Authorization request URLs can become quite large, especially in scenarios requiring fine-grained authorization data.
 
-JWT Secured Authorization Request (JAR) [@!I-D.ietf-oauth-jwsreq] provides solutions for those challenges by allowing OAuth clients to wrap authorization request parameters in a signed, and optionally encrypted, JSON Web Token (JWT), the so-called "Request Object". 
-
-In order to cope with the size restrictions, JAR introduces the `request_uri` parameter that allows clients to send a reference to a request object instead of the request object itself.    
-
-This document complements JAR by providing an interoperable way to push the payload of a request object directly to the AS in exchange for a `request_uri`.
-
-It also allows for clients to push the form encoded authorization request parameters to the AS in order to   
-exchange them for a request URI that the client can use in a subsequent authorization request. 
+...
 
 For example, the following authorization request,
 
@@ -107,13 +99,15 @@ This specification uses the terms "access token", "refresh token",
 "grant type", "access token request", "access token response", and
 "client" defined by The OAuth 2.0 Authorization Framework [@!RFC6749].
 
-# heading A
+# Heading A
+
+see [Introduction](#Introduction)
 
 ## Heading AA
 
 # References
 
-[RFC6749](https://tools.ietf.org/html/rfc6749)
+[OAuth]: https://tools.ietf.org/html/rfc6749
 
 # Document History
 
