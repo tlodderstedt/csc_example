@@ -116,7 +116,7 @@ see [Introduction](#Introduction)
    -00 
 
    * first draft
-   * additional point
+   * additional point 2
 
    
    
