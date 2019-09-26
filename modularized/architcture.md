@@ -1,4 +1,6 @@
-#Architecture
+# Architecture
+
+TBD
 
 ## Error Response {#error_response}
 
