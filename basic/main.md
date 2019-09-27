@@ -5,6 +5,8 @@ clients to push the payload of an OAuth 2.0 authorization request to the
 authorization server via a direct request and provides them
 with a request URI that is used as reference to the data in a subsequent authorization request.   
 
+This is my proposal.
+
 # Introduction {#Introduction}
 
 OAuth ([RFC 6749](https://tools.ietf.org/html/rfc6749)) authorization request parameters are typically sent as URI query parameters via redirection in the user-agent. This is simple but also yields challenges:
