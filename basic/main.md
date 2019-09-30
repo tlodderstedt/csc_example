@@ -33,9 +33,119 @@ JSON example
 {  
    "verified_claims":{  
       "verification":{  
+         "trust_framework":"eidas_ial_substantial",
+         "time":"2012-04-23T18:25:43.511+01",
+         "evidence":[  
+            {  
+               "type":"id_document",
+               "method":"pipp",
+               "document":{  
+                  "type":"idcard",
+                  "issuer":{  
+                     "name":"Stadt Augsburg",
+                     "country":"DE"
+                  },
+                  "number":"53554554",
+                  "date_of_expiry":"2022-04-22"
+               }
+            }
+         ]
+      },
+      "claims":{  
+         "given_name":"Max",
+         "family_name":"Meier",
+         "birthdate":"1956-01-28",
+         "address":{  
+            "locality":"Maxstadt",
+            "postal_code":"12344",
+            "country":"DE",
+            "street_address":"An der Sanddüne 22"
+         }
+      }
+   }
+}
+```
+```JSON
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{  
+   "sub":"248289761001",
+   "verified_claims":{  
+      "verification":{  
+         "trust_framework":"eidas_ial_substantial",
+         "time":"2012-04-23T18:25:43.511+01",
+         "evidence":[  
+            {  
+               "type":"id_document",
+               "method":"pipp",
+               "document":{  
+                  "type":"idcard",
+                  "issuer":{  
+                     "name":"Stadt Augsburg",
+                     "country":"DE"
+                  },
+                  "number":"53554554",
+                  "date_of_expiry":"2022-04-22"
+               }
+            }
+         ]
+      },
+      "claims":{  
+         "given_name":"Max",
+         "family_name":"Meier",
+         "birthdate":"1956-01-28"
+      }
+   }
+}
+```
+
+```json
+{  
+   "iss":"https://server.example.com",
+   "sub":"24400320",
+   "aud":"s6BhdRkqt3",
+   "nonce":"n-0S6_WzA2Mj",
+   "exp":1311281970,
+   "iat":1311280970,
+   "auth_time":1311280969,
+   "acr":"urn:mace:incommon:iap:silver",
+   "verified_claims":{  
+      "verification":{  
+         "trust_framework":"eidas_ial_substantial",
+         "time":"2012-04-23T18:25:43.511+01",
+         "evidence":[  
+            {  
+               "type":"id_document",
+               "method":"pipp",
+               "document":{  
+                  "type":"idcard",
+                  "issuer":{  
+                     "name":"Stadt Augsburg",
+                     "country":"DE"
+                  },
+                  "number":"53554554",
+                  "date_of_expiry":"2022-04-22"
+               }
+            }
+         ]
+      },
+      "claims":{  
+         "given_name":"Max",
+         "family_name":"Meier",
+         "birthdate":"1956-01-28"
+      }
+   }
+}
+```
+
+
+```JSON
+{  
+   "verified_claims":{  
+      "verification":{  
          "trust_framework":"de_aml",
          "time":"2012-04-23T18:25:43.511+01",
-         "verification_process":"676q3636461467647q8498785747q487",
          "evidence":[  
             {  
                "type":"id_document",
@@ -70,6 +180,57 @@ JSON example
          }
       }
    }
+}
+```
+```json
+{ 
+  "userinfo":{ 
+    "verified_claims":{ 
+      "verification":{ 
+        "time":null,
+        "evidence":[ 
+          { 
+            "method":null,
+            "document":null
+          }
+        ]
+      },
+      "claims":{ 
+        "given_name":null,
+        "family_name":null,
+        "birthdate":null
+      }
+    }
+  }
+}
+```
+
+```json
+{ 
+  "userinfo":{ 
+    "verified_claims":{ 
+      "verification":{ 
+        "evidence":[ 
+          { 
+            "type":{ 
+              "value":"id_document"
+            },
+            "document":{ 
+              "type":{ 
+                "values":[ 
+                  "idcard",
+                  "passport"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "family_name":{ 
+        "value":"Meier"
+      }
+    }
+  }
 }
 ```
 
